@@ -1,59 +1,46 @@
-# ts-boilerplate
+# toggl-clone
 
-This is a template repository. So just use the template and once you have your repository cloned on your pc just run `npm install` for installing all the dependencies.
+The purpose for this repository is to create a time tracker based on Toggl tracker using clean architecture.
 
-## Scripts
+## Use cases
 
-```javascript
-"prestart": "npm run build",
-"start": "node build/index.js",
-"dev": "npm run build -- --watch & nodemon build/index.js",
-"build": "npm run lint && tsc",
-"lint": "./node_modules/.bin/eslint . --ext .ts",
-"lint:fix": "npm run lint -- --fix",
-"test": "jest",
-"test:tdd": "npm t -- --watch"
-```
+### Client 
+- create a client
+- get client details
+- update a client
+- delete a client
+- get client projects
+- archive client
 
-## Test config
+### Project
+- create a project
+- get project data
+- update project data
+- delete a project
+- get project tasks
 
-```javascript
-{
-  "roots": [
-    "<rootDir>/src"
- ],
- "testMatch": [
-    "**/__tests__/**/*.+(ts|js)",
-    "**/?(*.)+(spec|test).+(ts|js)"
- ],
- "transform": {
-    "^.+\\.(ts)?$": "ts-jest"
- }
-}
-```
+### Tasks 
+- create a task
+- get task details
+- start/continue tracking time for a task
+- stop tracking time for a task
+- set task as done
+- update a task
+- delete a task
+- update multiple tasks
+- delete multiple tasks
 
-## Linter config
+### Time entries
+- create a time entry
+- start a time entry
+- stop a time entry
+- get time entry details
+- get current time entry
+- update time entry
+- delete time entry
 
-```javascript
-{
-  env: {
-    browser: true,
-    es2020: true,
-    node: true,
-    jest: true,
-  },
-  extends: [
-    "standard",
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
-  ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: 11,
-    sourceType: "module",
-  },
-  plugins: ["@typescript-eslint", "prettier"],
-  rules: {},
-}
-```
+### User
+- create user
+- get user data
+- get current task
+- update current user data
