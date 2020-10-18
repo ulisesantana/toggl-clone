@@ -20,3 +20,9 @@ export class Client {
     return this._name;
   }
 }
+
+export class NullClient extends Client {
+  constructor() {
+    super({ id: "", name: "Client not found" });
+  }
+}

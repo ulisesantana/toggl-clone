@@ -1,4 +1,4 @@
-import { Project } from "core/entity";
+import { Project } from "entities";
 import { Time } from "utils";
 
 interface TaskConstructorParams {
@@ -30,15 +30,15 @@ export class Task {
     this._estimatedTime = estimatedTime;
   }
 
-  get id() {
+  get id(): string {
     return this._id;
   }
 
-  get name() {
+  get name(): string {
     return this._name;
   }
 
-  get project() {
+  get project(): Project {
     return this._project;
   }
 
@@ -46,7 +46,7 @@ export class Task {
     return this._estimatedTime;
   }
 
-  isDone() {
+  isDone(): boolean {
     return this._done;
   }
 }

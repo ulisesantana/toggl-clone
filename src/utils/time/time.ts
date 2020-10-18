@@ -1,6 +1,10 @@
 export class Time {
   constructor(private valueInMilliseconds: number) {}
 
+  get value(): number {
+    return this.valueInMilliseconds;
+  }
+
   toPrecisionSeconds(): number {
     return this.valueInMilliseconds / 1000;
   }

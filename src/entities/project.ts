@@ -1,4 +1,4 @@
-import { Client } from "core/entity";
+import { Client } from "entities";
 
 export interface ProjectConstructorParams {
   id: string;

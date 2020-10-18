@@ -1,5 +1,5 @@
 import { Time } from "utils";
-import { Task } from "core/entity";
+import { Task } from "entities";
 
 export interface TimeEntryConstructorParams {
   id: string;
